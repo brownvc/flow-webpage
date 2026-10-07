@@ -1,0 +1,230 @@
+---
+redirect_from: flow/
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- =====================================================================
+  Brown Visual Computing — project-page template.
+  Copy this file into a new <project>-webpage repo as index.html and fill
+  in the ALL-CAPS placeholders. Delete any section you don't need; keep
+  the section ORDER. Styling comes from the shared stylesheet — resist
+  per-page CSS beyond a small <style> block for page-specific figures.
+====================================================================== -->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>PROJECT TITLE</title>
+
+  <!-- Brown brand fonts (Minion 3 + Freight Sans), the lab's Adobe Fonts kit. -->
+  <link rel="preconnect" href="https://use.typekit.net" crossorigin>
+  <link rel="stylesheet" href="https://use.typekit.net/diw5pgv.css">
+
+  <!-- Shared BVC project-page styles + JS (theme toggle, videoGrid). -->
+  <link rel="stylesheet" href="https://visual.cs.brown.edu/projects/shared/project.css">
+  <script defer src="https://visual.cs.brown.edu/projects/shared/project.js"></script>
+
+  <!-- OPTIONAL per-page skin: a page with a strong identity may
+       re-specify the design TOKENS (--accent, --ink, --bg, ...) in a
+       <style id="page-skin"> block here — tokens only, never component
+       structure, and give BOTH themes an interpretation so the toggle
+       keeps working. The BVC bar stays standard. Reference example:
+       sterkfontein-webpage (torchlit cave dark / daylight limestone light). -->
+
+
+  <!-- Pre-paint theme: apply the stored/OS choice before first render (no
+       flash). Same localStorage 'theme' key + attribute as visual.cs.brown.edu. -->
+  <script>
+    (function () {
+      var t; try { t = localStorage.getItem('theme'); } catch (e) {}
+      var dark = t === 'dark' || (!t && matchMedia('(prefers-color-scheme: dark)').matches);
+      document.documentElement.setAttribute('data-bs-theme', dark ? 'dark' : 'light');
+    })();
+  </script>
+</head>
+
+<body>
+  <!-- The BVC brand bar (crest, wordmark, social icons, theme toggle) is
+       injected at the top of <body> by the shared project.js, so it stays
+       identical to visual.cs.brown.edu without per-page edits. -->
+
+  <main class="project">
+
+    <h1 class="project-title">
+      PROJECT TITLE
+      <span class="subtitle">OPTIONAL SUBTITLE — delete the span if unused</span>
+    </h1>
+    <p class="venue">VENUE YEAR <strong>(Oral)</strong></p>
+
+    <div class="authors">
+      <span class="author"><a href="https://AUTHOR1.example">Author One</a><sup>1</sup>,</span>
+      <span class="author"><a href="https://AUTHOR2.example">Author Two</a><sup>2</sup>,</span>
+      <span class="author"><a href="https://jamestompkin.com/">James Tompkin</a><sup>1</sup></span>
+    </div>
+    <!-- Affiliation logos resolve through the shared registry
+         (data-logo="name"), same as the footer strip — light/dark
+         variants come for free. Unregistered institutions: use a local
+         <img> and add the logo to the registry when convenient. -->
+    <div class="affil-logos">
+      <span class="logo-item"><sup>1</sup><span data-logo="brown-cs"></span></span>
+      <span class="logo-item"><sup>2</sup><span data-logo="OTHER_LOGO_NAME"></span></span>
+    </div>
+
+    <nav class="resource-row">
+      <a href="PAPER.pdf">Paper</a>
+      <a href="https://arxiv.org/abs/XXXX.XXXXX">arXiv</a>
+      <a href="https://github.com/brownvc/REPO">Code</a>
+      <a href="#video">Video</a>
+      <a href="DATA_URL">Data</a>
+    </nav>
+
+    <!-- Teaser: an image, or an autoplay-muted-loop video. -->
+    <figure class="teaser">
+      <img src="./images/teaser.jpg" alt="DESCRIBE THE TEASER">
+      <!-- <video src="./videos/teaser.mp4" autoplay muted loop playsinline></video> -->
+    </figure>
+
+    <!-- ================= Canonical sections =================
+         Every section follows <section id="x-section"><h2 id="x"> — the
+         same convention as the main site's homepage, so the shared
+         scrollspy works verbatim and #x deep links mean the same thing
+         on every project page. Canonical ids, in order:
+           abstract (required), paper, method, results, video,
+           dataset, citation (required), related, notes,
+           acknowledgements (recommended).
+         Name each section for what it holds so the nav reads the same as
+         the heading — `paper`, `data`, `code`, `video`, never a generic
+         "Downloads". The nav is already conditional: a page only has the
+         sections it has, so it shows only those. `paper` sits before
+         `video` so it leads the menu.
+         Heading TEXT is free ("Our Proposal" may carry id="method") —
+         the id is the semantic name. Genuinely novel sections use the
+         same pattern with their own slug. A second paper on the same
+         page suffixes: abstract-2, citation-2, ...
+         Delete the sections you don't need; keep the ORDER. -->
+
+    <section id="abstract-section">
+      <h2 id="abstract">Abstract</h2>
+      <p>ABSTRACT TEXT.</p>
+    </section>
+
+    <!-- Paper: use this section only when the paper has multiple file
+         variants (full-size + small PDF + HTML) and/or a supplemental
+         document — one <figure> per document, formats in the figcaption.
+         A page with a single paper PDF skips this section and just links
+         Paper from the resource-row above. Heading is "Paper" so the nav
+         reads "Paper", not "Downloads".
+    <section id="paper-section">
+      <h2 id="paper">Paper</h2>
+      <div class="doc-row">
+        <figure>
+          <a href="./assets/PAPER.pdf"><img src="./assets/paper-thumb.png" alt="Paper first page"></a>
+          <figcaption>Paper<br>
+            <a href="./assets/PAPER.pdf">PDF 12&nbsp;MB</a> |
+            <a href="./assets/PAPER_small.pdf">PDF 1&nbsp;MB</a> |
+            <a href="./assets/PAPER.html">HTML</a>
+          </figcaption>
+        </figure>
+        <figure>
+          <a href="./assets/SUPPLEMENTAL.pdf"><img src="./assets/supplemental-thumb.png" alt="Supplemental document first page"></a>
+          <figcaption>Supplemental<br>
+            <a href="./assets/SUPPLEMENTAL.pdf">PDF 4&nbsp;MB</a> |
+            <a href="./assets/SUPPLEMENTAL.html">HTML</a>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+    -->
+
+    <section id="method-section">
+      <h2 id="method">Method</h2>
+      <figure>
+        <img src="./images/method.png" alt="DESCRIBE THE FIGURE">
+        <figcaption>OPTIONAL CAPTION.</figcaption>
+      </figure>
+    </section>
+
+    <section id="results-section">
+      <h2 id="results">Results</h2>
+      <!-- Simple comparisons: .media-row (side-by-side, wraps on mobile).
+           Many results: .snap-row (scroll-snap carousel, no JS) or the
+           videoGrid() helper:
+             <div id="results-grid"></div>
+             <script>
+               window.addEventListener('DOMContentLoaded', function () {
+                 videoGrid('#results-grid', [
+                   { src: './videos/scene1.mp4', label: 'Scene 1' },
+                   { src: './videos/scene2.mp4', label: 'Scene 2' },
+                 ], { controls: true });
+               });
+             </script> -->
+    </section>
+
+    <section id="video-section">
+      <h2 id="video">Video</h2>
+      <!-- Prefer a local mp4; iframes (YouTube / OneDrive / Slides) go in
+           a .embed wrapper for responsive 16:9. -->
+      <div class="embed">
+        <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID" title="Presentation video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- Slides: host a .pptx once — it embeds AND downloads. project.js
+         turns data-pptx into a Microsoft Office Online viewer (URL
+         resolved + encoded for you); the same file, linked directly,
+         downloads (browsers can't render pptx inline).
+    <section id="slides-section">
+      <h2 id="slides">Slides</h2>
+      <div class="slides-embed" data-pptx="./assets/DECK.pptx"></div>
+      <p class="centerContent"><a href="./assets/DECK.pptx" download>Download slides (PPTX)</a></p>
+    </section>
+    -->
+
+
+    <section id="dataset-section">
+      <h2 id="dataset">Dataset</h2>
+      <!-- Download button + .panel how-to (see sterkfontein). Delete if
+           the paper has no dataset. -->
+    </section>
+
+    <section id="citation-section">
+      <h2 id="citation">Citation</h2>
+      <!-- A Copy button is auto-attached to every pre.citation by the
+           shared project.js — no markup needed. -->
+      <pre class="citation"><code>@inproceedings{KEY,
+    title     = {PROJECT TITLE},
+    author    = {One, Author and Two, Author and Tompkin, James},
+    booktitle = {VENUE},
+    year      = {YEAR}
+}</code></pre>
+    </section>
+
+    <section id="related-section">
+      <h2 id="related">Related Projects</h2>
+      <ul>
+        <li><a href="https://visual.cs.brown.edu/projects/OTHER-webpage/">OTHER PROJECT</a></li>
+      </ul>
+    </section>
+
+    <section id="acknowledgements-section">
+      <h2 id="acknowledgements">Acknowledgements</h2>
+      <p>FUNDING AND THANKS.</p>
+    </section>
+
+    <!-- Institution/funder logos come from the shared registry: name them
+         here and project.js emits the current files with the right
+         dark-mode handling (update shared/logos/ once -> all pages update).
+         Registered names + how to add one live in _data/logos.json (drop
+         the image in projects/shared/logos/, add one entry). A logo not worth
+         registering can stay a local <img>: default gets a light pill in
+         dark mode; add class="dark-invert" for monochrome artwork, or a
+         class="light-only" + class="dark-only" pair of real variants. -->
+    <footer class="logos" data-logos="brown-cs nsf"></footer>
+
+  </main>
+</body>
+</html>
