@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flow — Documentation</title>
+  <link rel="stylesheet" href="flow.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-text">Flow</span>
+      </a>
+    </div>
+  </header>
+
+  <div class="layout">
+
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <p class="sidebar-label">Getting Started</p>
+        <ul>
+          <li><a href="flow.html">Introduction</a></li>
+          <li><a href="installation.html">Installation</a></li>
+          <li><a href="updating.html">Updating</a></li>
+          <li><a href="uninstallation.html">Uninstallation</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <p class="sidebar-label">How to Use</p>
+        <ul>
+          <li><a href="mainviewport.html">Main Viewport</a></li>
+          <li><a href="profiling.html" class="active">Profiling and Diagnostics</a></li>
+          <li><a href="editselected.html">Edit Selected</a></li>
+          <li><a href="sceneoverview.html">Scene Overview</a></li>
+          <li><a href="simulation.html">Simulation</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="content">
+
+      <div class="page-header">
+        <h1>Profiling and Diagnostics</h1>
+        <p class="page-subtitle">Only if you're curious</p>
+      </div>
+
+      <section class="doc-section">
+        <h2 id="broad-overview">Broad Overview</h2>
+        <p>
+          The profiling and diagonistics panels are located in the bottom left
+          of your screen. These panels cover application performance, and are largely
+          only useful for developers, or if you're curious on how much of your computer
+          Flow is chewing on!
+        </p>
+        <figure class="doc-image">
+          <img src="images/pandd.png"/>
+          <figcaption>The Profiling and Diagnostics panels</figcaption>
+        </figure>
+        <p>
+          If this looks confusing, or if it sounds uninteresting, thats ok! You don't need to really
+          care about this panel as a user. You can safely ignore it.
+        </p>
+      </section>
+
+      <section class="doc-section">
+        <h2 id="profiling">Profiling</h2>
+        <p>
+          The current panel being displayed will be the profiling panel. This panel shows a real-time
+          graph of the application performance. you can also toggle on what stats are being tracked by
+          clicking the checkboxes. The actual names of the stats are pretty self explanatory!
+        </p>
+      </section>
+
+      <section class="doc-section">
+        <h2 id="diagnostics">Diagnostics</h2>
+        <p>
+          If you click the "diagnostics" tab, the panel will swap to the diagnostics panel! Here
+          you can see all the stats from the profiling tab, but as real-time numbers instead of a graph.
+          There's also some additional information here, such as the number of triangles being rendered,
+          and an option to toggle VSYNC.
+        </p>
+        <figure class="doc-image">
+          <img src="images/diag.png"/>
+          <figcaption>What the diagnostics panel looks like</figcaption>
+        </figure>
+      </section>
+
+      <div class="page-nav">
+        <div></div>
+        <a href="editselected.html" class="page-nav-next">
+          <span class="page-nav-label">Next</span>
+          <span class="page-nav-title">Edit Selected →</span>
+        </a>
+      </div>
+
+    </main>
+
+    <aside class="toc">
+      <p class="toc-title">On this page</p>
+      <ul>
+        <li><a href="#broad-overview">Broad Overview</a></li>
+        <li><a href="#profiling">Profiling</a></li>
+        <li><a href="#diagnostics">Diagnostics</a></li>
+      </ul>
+    </aside>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flow — Documentation</title>
+  <link rel="stylesheet" href="flow.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-text">Flow</span>
+      </a>
+    </div>
+  </header>
+
+  <div class="layout">
+
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <p class="sidebar-label">Getting Started</p>
+        <ul>
+          <li><a href="flow.html">Introduction</a></li>
+          <li><a href="installation.html">Installation</a></li>
+          <li><a href="updating.html">Updating</a></li>
+          <li><a href="uninstallation.html">Uninstallation</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <p class="sidebar-label">How to Use</p>
+        <ul>
+          <li><a href="mainviewport.html">Main Viewport</a></li>
+          <li><a href="profiling.html">Profiling and Diagnostics</a></li>
+          <li><a href="editselected.html">Edit Selected</a></li>
+          <li><a href="sceneoverview.html" class="active">Scene Overview</a></li>
+          <li><a href="simulation.html">Simulation</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="content">
+
+      <div class="page-header">
+        <h1>Scene Overview</h1>
+        <p class="page-subtitle">Push your boundaries!</p>
+      </div>
+
+      <section class="doc-section">
+        <h2 id="broad-overview">Broad Overview</h2>
+        <p>
+          The scene overview panel is located in the top right of the application, and lets you create a new configuration, save the current one, or load an existing one!
+        </p>
+        <figure class="doc-image">
+          <img src="images/configure.png"/>
+          <figcaption>What the scene overview panel looks like</figcaption>
+        </figure>
+      </section>
+
+      <section class="doc-section">
+        <h2 id="configuring-a-boundary">Configuring a Boundary</h2>
+        <p>
+          Because computers have limited memory, a configuration cannot be infinite! However, we can do the best we can. 
+        </p>
+        <p>
+          To configure a boundary, click the "+" button in the top right of the panel. This will
+          open a popup with a list of options to choose from. 
+        </p>
+        <figure class="doc-image">
+          <img src="images/popup.png"/>
+          <figcaption>The initial popup</figcaption>
+        </figure>
+        <p>
+          Once you click the new scene button, you'll be taken to the next popup stage, where you
+          can specify the dimensions of your configuration by clicking and dragging each number button to your desired number.
+          At the moment, there is a hard cap of 20 in any dimension, with the maximum being 20x20x20. This is because if it gets any larger,
+          it will be unlikely that your given device will be able to comfortably play around with the configuration.
+        </p>
+        <figure class="doc-image">
+          <img src="images/toh.png"/>
+          <figcaption>Configure dimensions</figcaption>
+        </figure>
+        <div class="callout callout-warning">
+          <span class="callout-icon">⚠️</span>
+          <div>
+            <strong>BE WARNED</strong> pressing submit will clear any current configuration you have right now, including any 
+            configured holes or edge flows. If you'd like to save your current configuration, keep reading to see how to save your session.
+          </div>
+        </div>
+      </section>
+
+      <section class="doc-section">
+        <h2 id="saving-your-session">Saving Your Session</h2>
+        <p>
+          To save your session, you can either save your session to a new name, or overwrite an existing one.
+        </p>
+        <p>
+          To save your session under a new name, click the "Save Scene As" button in the popup.
+        </p>
+        <figure class="doc-image">
+          <img src="images/saveas.png"/>
+          <figcaption>The Save As Dialog</figcaption>
+        </figure>
+        <p>
+          Once you click the new scene button, you'll be taken to the next popup stage, where you
+          can specify the name of your session to save. Click the input box and type out what you need,
+          and then hit Submit when you're done!
+        </p>
+        <p>
+          To save your session under an existing name, such as the one you may have just saved, you can
+          instead click the "Save Scene" button in the initial dialog.
+        </p>
+        <figure class="doc-image">
+          <img src="images/save.png"/>
+          <figcaption>The Save Dialog</figcaption>
+        </figure>
+        <p>
+          Here you can click for a dropdown of available names that you've saved under before. This will overwrite
+          that save with the current session you've configured.
+        </p>
+      </section>
+
+      <section class="doc-section">
+        <h2 id="loading-a-session">Loading A Session</h2>
+        <p>
+          Now that you've saved a session, how can you load one? To do so, click on the "Load Scene"
+          button on the initial dialog.
+        </p>
+        <figure class="doc-image">
+          <img src="images/load.png"/>
+          <figcaption>The Load Dialog</figcaption>
+        </figure>
+        <p>
+          Here you can click on the select session button to get a dropdown menu of available names
+          you've saved before. Once you click the one you want, click "Load" to load it up!
+        </p>
+        <div class="callout callout-warning">
+          <span class="callout-icon">⚠️</span>
+          <div>
+            <strong>BE WARNED</strong> pressing load will clear any current configuration you have right now, including any 
+            configured holes or edge flows. If you'd like to save your current configuration, make sure you click "Save" or "Save As"
+            first.
+          </div>
+        </div>
+      </section>
+
+      <div class="page-nav">
+        <div></div>
+        <a href="simulation.html" class="page-nav-next">
+          <span class="page-nav-label">Next</span>
+          <span class="page-nav-title">Simulation →</span>
+        </a>
+      </div>
+
+    </main>
+
+    <aside class="toc">
+      <p class="toc-title">On this page</p>
+      <ul>
+        <li><a href="#broad-overview">Broad Overview</a></li>
+        <li><a href="#configuring-a-boundary">Configuring A Boundary</a></li>
+        <li><a href="#saving-your-session">Saving Your Session</a></li>
+        <li><a href="#loading-a-session">Loading A Session</a></li>
+      </ul>
+    </aside>
+
+  </div>
+
+</body>
+</html>

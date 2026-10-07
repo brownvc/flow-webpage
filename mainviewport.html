@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flow — Documentation</title>
+  <link rel="stylesheet" href="flow.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-text">Flow</span>
+      </a>
+    </div>
+  </header>
+
+  <div class="layout">
+
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <p class="sidebar-label">Getting Started</p>
+        <ul>
+          <li><a href="flow.html">Introduction</a></li>
+          <li><a href="installation.html">Installation</a></li>
+          <li><a href="updating.html">Updating</a></li>
+          <li><a href="uninstallation.html">Uninstallation</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <p class="sidebar-label">How to Use</p>
+        <ul>
+          <li><a href="mainviewport.html" class="active">Main Viewport</a></li>
+          <li><a href="profiling.html">Profiling and Diagnostics</a></li>
+          <li><a href="editselected.html">Edit Selected</a></li>
+          <li><a href="sceneoverview.html">Scene Overview</a></li>
+          <li><a href="simulation.html">Simulation</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="content">
+
+      <div class="page-header">
+        <h1>Main Viewport</h1>
+        <p class="page-subtitle">Small screen, big data!</p>
+      </div>
+
+      <section class="doc-section">
+        <h2 id="broad-overview">Broad Overview</h2>
+        <p>
+          The viewport is located in the center of the Flow UI. Here you can visualize your
+          configuration! There's also some additional information that you can view here, such as
+          keybind hints and a color key for reference.
+        </p>
+        <figure class="doc-image">
+          <img src="images/viewport.png"/>
+          <figcaption>What you will likely see the first time you see the viewport</figcaption>
+        </figure>
+        <p>
+          If this looks confusing, not to worry! We'll explain each part of the viewport in the following
+          sections.
+        </p>
+      </section>
+
+      <section class="doc-section">
+        <h2 id="keybind-hints">Keybind Hints</h2>
+        <p>
+          On the top left of the viewport, you'll see keybind hints.
+        </p>
+        <div class="callout callout-warning">
+          <span class="callout-icon">⚠️</span>
+          <div>
+            <strong>Don't see hints?</strong> Hover your cursor on the viewport! Hints only appear if your mouse is on the viewport. If they still
+            don't show up, try pressing <strong>H</strong>, this keybind toggles hints on or off!
+          </div>
+        </div>
+        <p>
+          These hints will tell you what keys you can press or hold down next to perform an action! If you forget a keybind
+          that you want to use, just turn these on and explore it!
+        </p>
+        <figure class="doc-image">
+          <img src="images/hints.png"/>
+          <figcaption>What you should see on the top left corner of the viewport (text may vary)</figcaption>
+        </figure>
+        <p>
+          The first list of keybinds are inputs you can actively press, and what they do! For example,
+          if you press <strong>F</strong>, the active camera will zoom to fit the current geometric structure!
+        </p>
+        <p>
+          The second list are <strong>transition keybinds</strong>. This means you should <strong>hold down</strong>
+          these keys before pressing another. For example, you need to hold down <strong>left control</strong> while pressing
+          <strong>T</strong> in order to enter triangle select mode. As you press these transition keys down, the first list of
+          keybinds will update to reflect what available keybinds are now available at the next press!
+        </p>
+      </section>
+
+      <section class="doc-section">
+        <h2 id="color-key">Color Key</h2>
+        <p>
+          On the top right of the viewport, you'll see a color key.
+        </p>
+        <div class="callout callout-warning">
+          <span class="callout-icon">⚠️</span>
+          <div>
+            <strong>Don't see this?</strong> Try pressing <strong>K</strong>, this keybind toggles it on or off!
+          </div>
+        </div>
+        <p>
+          This color key will help you identify the flow values in your visualization!
+        </p>
+        <figure class="doc-image">
+          <img src="images/key.png"/>
+          <figcaption>What you should see on the top right corner of the viewport</figcaption>
+        </figure>
+        <p>
+          Each color corresponds to the absolute value of an edge's flow. The first 5 values are for each respective
+          flow value, and any value above 6 will be grouped up into the white color. If an edge has no flow, it will be
+          invisible.
+        </p>
+        <div class="callout callout-warning">
+          <span class="callout-icon">⚠️</span>
+          <div>
+            <strong>Don't see the correct colors?</strong> No worries, these colors only apply when you're viewing your configuration
+            with the <strong>edge</strong> mode and when your visualization is not the <strong>static</strong> mode. If you're confused
+            on what these terms mean, you can read more about them on the <strong><a href="simulation.html">simulation</a></strong> page.
+          </div>
+        </div>
+      </section>
+
+      <section class="doc-section">
+        <h2 id="main-visualization">Main Visualization</h2>
+        <p>
+          Within the viewport, you'll see some abstract geometric structure! This is your current visualization
+          of your configuration. This may look widly different based on your configuration, and how you've chosen
+          to visualize it. To learn more about how to visualize this best for you, read the <strong><a href="simulation.html">simulation</a></strong> page.
+        </p>
+        <figure class="doc-image">
+          <img src="images/vis.png"/>
+          <figcaption>an example of what you might see (depending on your configuration)</figcaption>
+        </figure>
+        <p>
+          You may be curious on exactly how to navigate your visualization. Here's some helpful basic keybinds you might
+          find useful!
+        </p>
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-body">
+              <h3>SPACEBAR + Drag with right click</h3>
+              <p>Rotate the camera about the current focus point (default is the origin)</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-body">
+              <h3>SPACEBAR + Drag with left click</h3>
+              <p>Pan the camera across the current view plane</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-body">
+              <h3>SCROLL or HOLD Z + Move mouse</h3>
+              <p>Zooms the camera in or out</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <div class="step-body">
+              <h3>PRESS F</h3>
+              <p>Zooms the camera automatically to fit the entire geometric structure</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">5</div>
+            <div class="step-body">
+              <h3>PRESS ` (the grave/tilda key)</h3>
+              <p>Resets the camera back to the scene origin</p>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="callout callout-warning">
+          <span class="callout-icon">⚠️</span>
+          <div>
+            <strong>Not working?</strong> Make sure youre in a "free camera" mode. Some visualizations lock the camera. If you're confused
+            on what these terms mean, you can read more about them on the <strong><a href="simulation.html">simulation</a></strong> page.
+          </div>
+        </div>
+      </section>
+
+      <div class="page-nav">
+        <div></div>
+        <a href="profiling.html" class="page-nav-next">
+          <span class="page-nav-label">Next</span>
+          <span class="page-nav-title">Profiling and Diagnostics →</span>
+        </a>
+      </div>
+
+    </main>
+
+    <aside class="toc">
+      <p class="toc-title">On this page</p>
+      <ul>
+        <li><a href="#broad-overview">Broad Overview</a></li>
+        <li><a href="#keybind-hints">Keybind Hints</a></li>
+        <li><a href="#color-key">Color Key</a></li>
+        <li><a href="#main-visualization">Main Visualization</a></li>
+      </ul>
+    </aside>
+
+  </div>
+
+</body>
+</html>

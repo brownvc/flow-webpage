@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flow — Documentation</title>
+  <link rel="stylesheet" href="flow.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-text">Flow</span>
+      </a>
+    </div>
+  </header>
+
+  <div class="layout">
+
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <p class="sidebar-label">Getting Started</p>
+        <ul>
+          <li><a href="flow.html">Introduction</a></li>
+          <li><a href="installation.html">Installation</a></li>
+          <li><a href="updating.html">Updating</a></li>
+          <li><a href="uninstallation.html">Uninstallation</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <p class="sidebar-label">How to Use</p>
+        <ul>
+          <li><a href="mainviewport.html">Main Viewport</a></li>
+          <li><a href="profiling.html">Profiling and Diagnostics</a></li>
+          <li><a href="editselected.html">Edit Selected</a></li>
+          <li><a href="sceneoverview.html">Scene Overview</a></li>
+          <li><a href="simulation.html" class="active">Simulation</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="content">
+
+      <div class="page-header">
+        <h1>Simulation</h1>
+        <p class="page-subtitle">Be prepared for a long read...</p>
+      </div>
+
+      <section class="doc-section">
+        <h2 id="broad-overview">Broad Overview</h2>
+        <p>
+          The simulation panel is located in the bottom right of the application, and covers how the configuration is simulated and visualized.
+        </p>
+        <figure class="doc-image">
+          <img src="images/simulation.png"/>
+          <figcaption>What the simulation panel looks like</figcaption>
+        </figure>
+      </section>
+
+      <section class="doc-section">
+        <h2 id="simulation-controls">Simulation Controls</h2>
+        <p>
+          To run a simulation, you can use the "Start", "Stop", and "Step" buttons in the simulation panel.
+        </p>
+        <p>
+          Pressing "Start" will start the simulation, in which every frame the edges will be fired. This button will then transform
+          into a "Pause" button, which you can then use to pause the simulation. If paused, this button will then transform into a "Resume"
+          button, which you can use to then resume the simulation. The simulation will always pick up off where it left at, and won't reset
+          unless the "Stop" button is pressed.
+        </p>
+        <p>
+          The "Stop" button will halt the simulation and reset it back to the original specified configuration.
+        </p>
+        <p>
+          If you'd like to slowly analyze the simulation, you can use the "Step" button. The "Step" button, when pressed,
+          will play the simulation for as many iterations as the number box next to it specifies. You can click and drag this
+          number box to increase the number of iterations you want to play per step!
+        </p>
+        <div class="callout callout-warning">
+          <span class="callout-icon">⚠️</span>
+          <div>
+            <strong>BE WARNED</strong> as of right now, you cannot step back into the past of a simulation. Once an interation
+            fires edges, it's unreversable! You can only pause, resume, or reset the simulation.
+          </div>
+        </div>
+      </section>
+
+      <section class="doc-section">
+        <h2 id="simulation-view">Simulation View</h2>
+        <p>
+          The simulation view section of the panel controls how the scene will be visualized. The more complex parts
+          of these controls will be covered in the upcoming sections, but the simplist control in this view is the
+          "Reference Grid" checkbox. If you click this, it will toggle the on-screen grid.
+        </p>
+      </section>
+
+      <section class="doc-section">
+        <h2 id="camera-mode">Camera Mode</h2>
+        <p>
+          The "Camera Mode" control is a dropdown menu where you can select from multiple options on how to view the scene
+          with it's camera.
+        </p>
+        <p>
+          The first option is "Free Perspective". This option is what you may be most familiar with, where a typical perspective
+          camera can be freely controlled to view the geometry. You can think of this as the most similar camera type to just viewing
+          an object in reality.
+        </p>
+        <figure class="doc-image">
+          <img src="images/freep.png"/>
+          <figcaption>What a free perspective camera view may look like</figcaption>
+        </figure>
+        <p>
+          The second option is "Free Orthographic". This option is similar to a perspective camera in the sense that it can be freely
+          controlled. However, in this camera configuration, parallel lines will be viewed as parallel! This may sound confusing, but if you're
+          confused, try it out! You'll be able to more intuitively understand what this means after playing around with it.
+        </p>
+        <figure class="doc-image">
+          <img src="images/freeo.png"/>
+          <figcaption>What a free orthographic camera view may look like</figcaption>
+        </figure>
+        <p>
+          The third option is "Cubic". This option uses an orthographic camera to view the top, bottom, and 2 diagonal sides of the geometry at the same time.
+          Here the camera movement will be supressed, but you'll still be able to zoom in and out. The viewport will be divided into 4 quadrants, with
+          top row covering the side views and the bottom row covering the top and bottom views.
+        </p>
+        <figure class="doc-image">
+          <img src="images/cubic.png"/>
+          <figcaption>What a cubic camera view may look like</figcaption>
+        </figure>
+        <p>
+          The fourth option is "Ramped". This option is similar to the "Cubic" view, but instead of having a straight axis-aligned view of the geometry,
+          it will orient itself aligned to the normal of the tetrahedron. In other words, the top row will cover the +45 degree view and the -45 degree view
+          of the left side of the geometry, and the bottom row will cover the +45/-45 degree view of the right side.
+        </p>
+        <figure class="doc-image">
+          <img src="images/ramped.png"/>
+          <figcaption>What a ramped camera view may look like</figcaption>
+        </figure>
+        <p>
+          The fith option is "Corners". This option is similar to the "Ramped" view, but instead of being aligned parallel to the geometry sides, it looks
+          from the corners of the geometry.
+        </p>
+        <figure class="doc-image">
+          <img src="images/corners.png"/>
+          <figcaption>What a corners camera view may look like</figcaption>
+        </figure>
+      </section>
+
+      <section class="doc-section">
+        <h2 id="geometry-mode">Geometry Mode</h2>
+        <p>
+          The geometry mode control is also a dropdown menu, with the options to view the configuration as "Faces" or "Edges". "Faces"" will
+          render the faces of the geometry, while the "Edges" will render the edges of the geometry as cylinders. To use selection controls
+          and edit your faces as holes or initial edge flow values, you will have to be in "Faces" mode. "Faces" mode does not reflect any flow
+          values at the moment, so it is not recommended to view the simulation progression using "Faces" mode.
+        </p>
+      </section>
+
+      <section class="doc-section">
+        <h2 id="edge-mode">Edge Mode</h2>
+        <p>
+          Edge mode is only available if your geometry mode is currently in "Edges" mode. Edge mode allows for more control over how you visualize
+          your edges.
+        </p>
+        <p>
+          The first option, "Static", will just show every single edge as static colors. This can be useful for visualizing your entire geometry at once
+          without being concerned with if edges have flow, as edges with 0 flow will show up as black cylinders.
+        </p>
+        <figure class="doc-image">
+          <img src="images/static.png"/>
+          <figcaption>What edges look like under the "Static" option</figcaption>
+        </figure>
+        <p>
+          The second option, "Colored", will show every single edge colored with its flow value. You can see the key for edge flow values to colors if you have
+          the color key toggled by pressing <strong>K</strong>.
+        </p>
+        <div class="callout callout-warning">
+          <span class="callout-icon">⚠️</span>
+          <div>
+            <strong>Edges with no flow will be transparent!</strong> If you haven't configured any of your edges to have any value, don't be surprised if you see
+            nothing when you use this mode!
+          </div>
+        </div>
+        <figure class="doc-image">
+          <img src="images/colored.png"/>
+          <figcaption>What edges look like under the "Colored" option</figcaption>
+        </figure>
+        <p>
+          The third option, "Directional", will effectively act the same as the "Colored" option, with one small difference: depending on the flow
+          directionality, the color will change from black to the respective flow color in the direction the flow is going.
+        </p>
+        <figure class="doc-image">
+          <img src="images/directional.png"/>
+          <figcaption>What edges look like under the "Directional" option</figcaption>
+        </figure>
+        <p>
+          The fourth option, "Flow", will be the same as "Directional", except the color of an edge will actually move in the direction of the flow!
+          This may help visualize the nature of the configuration, so be sure to try it out!
+        </p>
+      </section>
+
+      <section class="doc-section">
+        <h2 id="cross-section">Cross Section</h2>
+        <p>
+          You may notice that it is hard to select faces and edges within the geometric structure because you cannot hover over edges
+          and faces that are covered by other geometry of the configuration. To remedy this, you can "cut" into the geometry using the cross section.
+          At the moment, "cross section mode" does not do anything, but it is planned on snapping to the closest face/edge. As of now, you can click
+          and drag the "Cross Section" field to "cut" into the geometry by moving the camera view plane forward.
+        </p>
+        <figure class="doc-image">
+          <img src="images/slice.png"/>
+          <figcaption>Taking a "slice" into the geometry to desginate a hole in the center</figcaption>
+        </figure>
+        <p>
+          This is not restrained to "Face" mode, so if you think this may be helpful for visualizing and looking inside a simulation visual, try
+          cutting into it with this control!
+        </p>
+      </section>
+
+    </main>
+
+    <aside class="toc">
+      <p class="toc-title">On this page</p>
+      <ul>
+        <li><a href="#broad-overview">Broad Overview</a></li>
+        <li><a href="#simulation-controls">Simulation Controls</a></li>
+        <li><a href="#simulation-view">Simulation View</a></li>
+        <li><a href="#camera-mode">Camera Mode</a></li>
+        <li><a href="#geometry-mode">Geometry Mode</a></li>
+        <li><a href="#edge-mode">Edge Mode</a></li>
+        <li><a href="#cross-section">Cross Section</a></li>
+      </ul>
+    </aside>
+
+  </div>
+
+</body>
+</html>

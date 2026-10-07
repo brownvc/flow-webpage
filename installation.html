@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flow — Documentation</title>
+  <link rel="stylesheet" href="flow.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ── Top Navigation ── -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-text">Flow</span>
+      </a>
+    </div>
+  </header>
+
+  <div class="layout">
+
+    <!-- ── Sidebar ── -->
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <p class="sidebar-label">Getting Started</p>
+        <ul>
+          <li><a href="flow.html">Introduction</a></li>
+          <li><a href="installation.html" class="active">Installation</a></li>
+          <li><a href="updating.html">Updating</a></li>
+          <li><a href="uninstallation.html">Uninstallation</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <p class="sidebar-label">How to Use</p>
+        <ul>
+          <li><a href="mainviewport.html">Main Viewport</a></li>
+          <li><a href="profiling.html">Profiling and Diagnostics</a></li>
+          <li><a href="editselected.html">Edit Selected</a></li>
+          <li><a href="sceneoverview.html">Scene Overview</a></li>
+          <li><a href="simulation.html">Simulation</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- ── Main Content ── -->
+    <main class="content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1>Installation</h1>
+        <p class="page-subtitle">Let's get started!</p>
+      </div>
+
+      <!-- Section -->
+      <section class="doc-section">
+        <h2 id="download-the-installer">(Windows) Download the Executable</h2>
+        <p>
+          If you're on Windows, you can download a zip folder with the .exe here, and then just run it from that directory!
+        </p>
+        <a href="https://github.com/JHeflinger/FlowFiring/releases/download/0.1.10/Flow-Windows.zip" class="btn-download" download>
+          ⬇ Download the Windows Executable
+        </a>
+      </section>
+
+      <!-- Section -->
+      <section class="doc-section">
+        <h2 id="download-the-installer">(Mac) Download the Installer</h2>
+        <p>
+          To install Flow, if you're on Mac, we've provided an installer script to run in the terminal. You can download it here!
+        </p>
+        <a href="install.sh" class="btn-download" download>
+          ⬇ Download the Installer
+        </a>
+      </section>
+
+      <!-- Section with steps -->
+      <section class="doc-section">
+        <h2 id="how-to-install">How to Install</h2>
+        <p>If you're unfamiliar with how shell scripts work, here's some further instruction!</p>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-body">
+              <h3>Open the terminal</h3>
+              <p>Open the terminal - if this is unfamiliar to you, press <strong>Command + SPACEBAR</strong>, type "Terminal", and hit enter</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-body">
+              <h3>Navigate to the Downloads folder</h3>
+              <p>Type in "cd ~/Downloads" in the terminal, and hit enter</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-body">
+              <h3>Add run permissions to the install script</h3>
+              <p>Type in "chmod +x install.sh" in the terminal, and hit enter</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <div class="step-body">
+              <h3>Run the install.sh script</h3>
+              <p>Type in "./install.sh" in the terminal, and hit enter</p>
+            </div>
+          </div>
+        </div>
+        <br>
+        <p>Once you've followed these steps to run the script, you'll be promted by the script for the rest of the installation!</p>
+      </section>
+
+      <!-- Callout / Warning -->
+      <div class="callout callout-warning">
+        <span class="callout-icon">⚠️</span>
+        <div>
+          <strong>Heads up:</strong> Some dependencies may require a system restart to take effect. When convenient, make sure to restart your device
+          if Flow has some issues the first time you open it!
+        </div>
+      </div>
+
+      <!-- Page footer nav -->
+      <div class="page-nav">
+        <div></div>
+        <a href="updating.html" class="page-nav-next">
+          <span class="page-nav-label">Next</span>
+          <span class="page-nav-title">Updating →</span>
+        </a>
+      </div>
+
+    </main>
+
+    <!-- ── Right TOC ── -->
+    <aside class="toc">
+      <p class="toc-title">On this page</p>
+      <ul>
+        <li><a href="#download-the-installer">Download the Installer</a></li>
+        <li><a href="#how-to-install">How to Install</a></li>
+      </ul>
+    </aside>
+
+  </div>
+
+</body>
+</html>

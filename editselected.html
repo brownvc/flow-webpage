@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flow — Documentation</title>
+  <link rel="stylesheet" href="flow.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-text">Flow</span>
+      </a>
+    </div>
+  </header>
+
+  <div class="layout">
+
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <p class="sidebar-label">Getting Started</p>
+        <ul>
+          <li><a href="flow.html">Introduction</a></li>
+          <li><a href="installation.html">Installation</a></li>
+          <li><a href="updating.html">Updating</a></li>
+          <li><a href="uninstallation.html">Uninstallation</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <p class="sidebar-label">How to Use</p>
+        <ul>
+          <li><a href="mainviewport.html">Main Viewport</a></li>
+          <li><a href="profiling.html">Profiling and Diagnostics</a></li>
+          <li><a href="editselected.html" class="active">Edit Selected</a></li>
+          <li><a href="sceneoverview.html">Scene Overview</a></li>
+          <li><a href="simulation.html">Simulation</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="content">
+
+      <div class="page-header">
+        <h1>Edit Selected</h1>
+        <p class="page-subtitle">Very important to know!</p>
+      </div>
+
+      <section class="doc-section">
+        <h2 id="broad-overview">Broad Overview</h2>
+        <p>
+          The edit selected panel is located in the upper left of the application. This panel will be
+          where you can modify a selected element of your configuration, such as a face or an edge!
+        </p>
+        <figure class="doc-image">
+          <img src="images/eselect.png"/>
+          <figcaption>What the edit selected panel looks like</figcaption>
+        </figure>
+        <p>
+          At first, it will say "No Selected Element" because nothing has been selected yet! That's ok,
+          we can go over how to select an element now. 
+        </p>
+      </section>
+
+      <section class="doc-section">
+        <h2 id="selecting-faces">Selecting Faces</h2>
+        <p>
+          To select a face, you'll need to be in <strong>face select mode</strong>.To do this, hold down
+          <strong>left control</strong> and press <strong>T</strong>. You should now be able to hover over
+          faces you can see, and click to select a face!
+        </p>
+        <div class="callout callout-warning">
+          <span class="callout-icon">⚠️</span>
+          <div>
+            <strong>Don't see faces?</strong> Make sure you're in <strong>Face</strong> mode. If this is confusing to you,
+            be sure to check out the <strong><a href="simulation.html">simulation</a></strong> page.
+          </div>
+        </div>
+        <figure class="doc-image">
+          <img src="images/selectface.png"/>
+          <figcaption>Selecting a face</figcaption>
+        </figure>
+        <p>
+          Once you select a face, you should see an option to toggle the face as a topological hole in the edit
+          panel. This will designate your face as a hole or not!
+        </p>
+        <figure class="doc-image">
+          <img src="images/eface.png"/>
+          <figcaption>Edit Selected Face</figcaption>
+        </figure>
+        <p>
+          Faces that are holes will also be colored jet black,
+          so it should be very visually apparent if a face is a hole or not without needing to select it.
+        </p>
+        <figure class="doc-image">
+          <img src="images/hole.png"/>
+          <figcaption>A hole is visually designated by being colored black</figcaption>
+        </figure>
+        <p>
+          If moving your mouse to the edit panel and clicking a small checkbox gets annoying for you, you can also
+          press <strong>Q</strong> while selecting a face to toggle it as a hole!
+        </p>
+      </section>
+
+      <section class="doc-section">
+        <h2 id="selecting-edges">Selecting Edges</h2>
+        <p>
+          To select an edge, you'll need to be in <strong>edge select mode</strong>. To do this, hold down
+          <strong>left control</strong> and press <strong>E</strong>. You should now be able to hover over
+          edges you can see, and click to select an edge!
+        </p>
+        <figure class="doc-image">
+          <img src="images/selectedge.png"/>
+          <figcaption>Selecting an edge</figcaption>
+        </figure>
+        <p>
+          Once you select an edge, you should be able to modify its flow. To do this, click and drag the numbered box
+          in the panel UI in either direction, or click on the small arrows to increment or decrement flow!
+        </p>
+        <figure class="doc-image">
+          <img src="images/eedge.png"/>
+          <figcaption>Edit Selected Edge</figcaption>
+        </figure>
+        <p>
+          When in Face mode, you may notice that when you select an edge, it has a gradient from blue to red. This indicates the direction
+          flow is going. Flow goes from blue to red!
+        </p>
+        <p>
+          You can also select edges in Edge mode as well! This may look a little different, but may feel more intuitive to you, and may be
+          easier for you to select an edge deeper inside the structure.
+        </p>
+        <figure class="doc-image">
+          <img src="images/eselecte.png"/>
+          <figcaption>Selecting an edge in Edge mode</figcaption>
+        </figure>
+        <p>
+          In Edge mode, you'll also be able to see the value of the flow as the color, so it'll be easier to keep track which ones you've
+          touched and configured!
+        </p>
+      </section>
+
+      <div class="page-nav">
+        <div></div>
+        <a href="sceneoverview.html" class="page-nav-next">
+          <span class="page-nav-label">Next</span>
+          <span class="page-nav-title">Scene Overview →</span>
+        </a>
+      </div>
+
+    </main>
+
+    <aside class="toc">
+      <p class="toc-title">On this page</p>
+      <ul>
+        <li><a href="#broad-overview">Broad Overview</a></li>
+        <li><a href="#selecting-faces">Selecting Faces</a></li>
+        <li><a href="#selecting-edges">Selecting Edges</a></li>
+      </ul>
+    </aside>
+
+  </div>
+
+</body>
+</html>

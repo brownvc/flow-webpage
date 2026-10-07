@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flow — Documentation</title>
+  <link rel="stylesheet" href="flow.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ── Top Navigation ── -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-text">Flow</span>
+      </a>
+    </div>
+  </header>
+
+  <div class="layout">
+
+    <!-- ── Sidebar ── -->
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <p class="sidebar-label">Getting Started</p>
+        <ul>
+          <li><a href="flow.html">Introduction</a></li>
+          <li><a href="installation.html">Installation</a></li>
+          <li><a href="updating.html" class="active">Updating</a></li>
+          <li><a href="uninstallation.html">Uninstallation</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <p class="sidebar-label">How to Use</p>
+        <ul>
+          <li><a href="mainviewport.html">Main Viewport</a></li>
+          <li><a href="profiling.html">Profiling and Diagnostics</a></li>
+          <li><a href="editselected.html">Edit Selected</a></li>
+          <li><a href="sceneoverview.html">Scene Overview</a></li>
+          <li><a href="simulation.html">Simulation</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- ── Main Content ── -->
+    <main class="content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1>Updating</h1>
+        <p class="page-subtitle">Toe the cutting edge!</p>
+      </div>
+
+      <!-- Section -->
+      <section class="doc-section">
+        <h2 id="the-installer-again">The installer again?</h2>
+        <p>
+          Yes, indeed! To update Flow, you can actually use the installer script! It will go ahead
+          and download the latest version, and replace the existing version if it exists. So if you have it still,
+          just run it again! If you don't have it then you can download it again here.
+        </p>
+        <a href="install.sh" class="btn-download" download>
+          ⬇ Download the Installer
+        </a>
+        <br><br>
+        <div class="callout callout-warning">
+          <span class="callout-icon">⚠️</span>
+          <div>
+            <strong>HOLD IT!!</strong> Updating/reinstalling will replace your current session on previous versions of the installation script. If you want to make sure this doesn't
+            happen, it's safest to redownload a fresh installation script and use that instead!
+          </div>
+        </div>
+      </section>
+
+      <!-- Page footer nav -->
+      <div class="page-nav">
+        <div></div>
+        <a href="uninstallation.html" class="page-nav-next">
+          <span class="page-nav-label">Next</span>
+          <span class="page-nav-title">Uninstallation →</span>
+        </a>
+      </div>
+
+    </main>
+
+    <!-- ── Right TOC ── -->
+    <aside class="toc">
+      <p class="toc-title">On this page</p>
+      <ul>
+        <li><a href="#the-installer-again">The installer again?</a></li>
+        <li><a href="#backing-up-your-session">Backing up your session</a></li>
+      </ul>
+    </aside>
+
+  </div>
+
+</body>
+</html>
